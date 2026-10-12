@@ -1,0 +1,2182 @@
+NEGUSTOLONOW: Proposal, Product
+Requirements and Technical Specification
+One document in five parts: what negustolonow is, what it must do, how it is built, the
+company that will hold it, and what is still open.
+
+
+
+
+1 OCTOBER 2026                                          PREPARED BY TECHNIBEARS, DETROIT
+CONTENTS
+
+
+
+Part A · The proposal
+1    Summary
+
+2    The problem
+
+3    What we are building
+
+4    Who is doing it
+
+5    What funding would support
+
+6    The road
+
+
+Part B · Product requirements
+7    The people it is for
+
+8    Principles that bind every product
+
+9    The house site
+
+10   The objects and their records
+
+11   Print codes
+
+12   Backroom and the Dummy 13 Arena
+
+13   The game: table and assembly
+
+14   Key rooms and the gamemaster key
+
+15   The card, and data as labour
+
+16   The SESHAT Seed, and the peace table
+
+17   Accessories and chips
+
+18   The workshops
+
+19   Out of scope for now
+
+
+Part C · Technical specification
+
+
+NEGUSTOLONOW                                page 2
+20    System overview
+
+21    Accounts and permissions
+
+22    Tokens (Proposed)
+
+23    Proving a physical piece (Proposed)
+
+24    A session, end to end (Proposed)
+
+25    Data
+
+26    Security and failure cases
+
+27    Build order
+
+
+Part D · The company
+28    What the company is, and why a wrapper
+
+29    The contract stack, and the voice and the bookplate
+
+30    The three classes, and how a proposal moves
+
+31    Money
+
+32   Wyoming in Detroit
+
+33    What an attorney will ask, and the answer we bring
+
+34    The order to form it
+
+
+Part E · Open and closing matter
+35    Decisions made, and decisions open
+
+36    Risks
+
+37    Words we will not use, and what we say instead
+
+38    Sources
+
+
+
+
+NEGUSTOLONOW                                                page 3
+How to read this
+   Part A, the proposal (sections 1 to 6) is for funders and mentors, and can be read alone.
+   Part B, the product requirements (sections 7 to 19) is for partners and anyone who will build, teach
+   or host.
+   Part C, the technical specification (sections 20 to 27) is for engineers and for FACINGS, the
+   company that will issue the tokens.
+   Part D, the company (sections 28 to 34), is for Michigan and Wyoming counsel.
+   Part E (sections 35 to 38) is for everyone: decisions, risks, the words we will not use, and sources.
+
+Every section ends with a line beginning State today:, saying what is built, what is only designed, and
+what is not started. A section marked Proposed is a design written for this document and not yet
+reviewed by FACINGS or an attorney. Nothing here is legal advice.
+
+
+
+
+   REVISION NOTICE / 10 OCTOBER 2026
+   Parts
+   Part D,D pages
+            and E,35-41,
+                    pagesreplaces
+                           35-44, now
+                                    the incorporate  the proposal
+                                         prior company   Red Door-aligned
+                                                                  with a
+   company
+   Red Door-aligned legal and governance structure. AppendicesThe
+              architecture and updated    decision/risk terminology.   I-III
+   three technical appendices explain what has NOT been demonstrated.
+   clarify edge AI, access rights, and source quality. Formation route,
+   Formation route, partner terms and offerings remain proposed.
+   partner agreements and investment terms remain proposed.
+
+
+
+
+NEGUSTOLONOW                                                                                          page 4
+PART A
+
+
+
+The proposal
+1   Summary
+negustolonow is a house in Detroit that makes up worlds, makes the objects that belong in them, and
+teaches other people to do the same. It is the brand over four things that form one loop: a website you
+walk through instead of scroll, real objects modelled from that world, a workshop curriculum, and a public
+record for each made thing. That record is a token: an entry on a public ledger that one account holds
+and can pass to another, usually called an NFT. This document proposes the next stage: print the first
+pieces, issue their records, open the worlds to play in real rooms, and establish a suitable legal entity to hold
+the common treasury.
+
+
+
+The thesis: Value first. Token second. A token is worth exactly what it is the record of, so we issue one
+only for something already worth having without it. The house has its own word for this. In Ossel, the first
+world it made up, every made thing arrives with a docket: a small note of what was made and what was
+done while making it. Nobody wants a docket without a chair. The token is the docket.
+
+Whose intelligence. Your kid already has an AI. The question is whose. This proposal's answer is grown
+on the block: the SESHAT Seed Project, as introduced by Uri Heru House, in conversation, is exploring a
+computational intelligence that a neighbourhood stewards itself. negustolonow would feed it by hand,
+only with work its players have chosen to have credited, and put it to work at a peace table, where two
+rooms that disagree make something together instead of making speeches (section 16). Nothing of it
+exists yet.
+
+THING                                                  STATE ON 1 OCTOBER 2026
+
+The house website                                      Live at technibears.com/negustolonow/. Nothing sold.
+
+Dummy figure workshops                                 Held at Red Door Digital.
+
+Jewellery: a diffuser, the docket ring, the hours      Print-ready. None printed.
+cuff
+
+Garments                                               Specified. None cut.
+
+Backroom's Dummy 13 Arena                              Alpha, behind a login.
+
+The ledger account negustolonow                        Exists since 29 December 2018. One key. No token issued.
+
+The game, the cards, the chips                         Designed. Nothing run, issued or bought.
+
+
+
+
+NEGUSTOLONOW                                                                                                        page 5
+THING                                              STATE ON 1 OCTOBER 2026
+
+The SESHAT Seed and the peace table                Exploring. Nothing built, trained or run. No two rooms have
+                                                   met.
+
+The company                                        Not formed. No attorney engaged.
+
+
+What funding would support. Four lines: the house, the school, the tools and the ledger. Amounts and
+terms are to be discussed with those sincerely interested. We also ask mentors to help settle the open
+decisions in section 35.
+
+    State today: The house, the curriculum and the Arena exist. The ledger layer, the game and
+    the company are designed and not started. The Seed is exploring, and nothing of it is
+    built.
+
+
+
+
+2    The problem
+Three kinds of digital thing lost their value in the same decade, for the same reason: nothing stood
+behind them.
+
+    1. The game you bought. It is a licence. It cannot be lent, resold or kept when the store closes. Robot
+       Cache, a store built on resale, closed in May 2026, and its users reportedly lost their games.
+ 2. The NFT you bought. It was a receipt for an image anyone could copy. One study in September 2023
+    found 69,795 of 73,257 NFT collections at a market value of zero; it is one study, and it counted
+    collections. Market sales in 2025 were $5.63 billion, about 37% down on 2024.
+3. The picture you generated. It belongs to nobody, and it looks like it.
+
+The usual NFT pitch started with the token and went looking for a reason to want it. We reverse the order.
+A token is issued only for a thing that is wanted without it: an object you can hold, a claim on one print of
+a design, a game you can play, an item that matters inside a game, or what you kept from an evening in a
+made-up place. The pattern has a survivor: Courtyard, whose tokens stand for graded trading cards held
+in a vault, raised a $30 million Series A in July 2025, by its own account.
+
+    State today: The thesis is untested against our own goods. Nothing has been sold or
+    issued.
+
+
+
+
+NEGUSTOLONOW                                                                                               page 6
+3   What we are building
+The curriculum's arc is concept sketch, 3D model, physical print, final pitch. The studio runs that arc in
+three directions. Each is a product, and play rides on all three.
+
+CROSSING       PRODUCT                     PATH                                          STATE
+
+Physical to    Dummy Dolls and "A Box of   A figure in your hand, 5,760 photographs, a   Running.
+digital        Kittens"                    world on screen
+
+Digital to     negustolonow, the house     A world written in prompts, things you keep, Live and public.
+digital                                    a figure drawn from them
+
+Digital to     The Dummy 13 Arena, and     A figure or a piece designed on screen, then Arena in alpha. No
+physical       the jewellery               printed                                      jewellery printed.
+
+Play           The game, in key rooms      A made piece becomes a piece on a table       Designed.
+
+
+Physical to digital. The Dummy figure is an open, 3D-printable action figure with a 26-step assembly;
+its base design, Dummy 13, is by soozafone under the CC BY 4.0 licence. A student builds one, then
+animates it in the stop-motion programme "A Box of Kittens", whose production is "8 Minutes". The
+curriculum is "Make Your Own, Kid!", taught as STEAM+E+D, and its arc is Action Figure to Action Taker.
+
+Digital to digital. The house is a website you walk through. Ossel is a 900-kilometre seawall country
+where the machines do all the work and hold no authority; Mercy Room, the second world, is one room
+and four garments. There is a pocket on every page: each thing a visitor passes gets one of three
+answers, Keep it, Not yet, or Leave it. The visit ends on the step, where a figure with its back turned is
+drawn only from what the visitor kept, with a printable docket ending in the word LOOK.
+
+Digital to physical. Backroom is the TechniBears portal at backroom.technibears.com. Its Arena (the
+Dummy 13 Arena) is a 3D parts bench: a user picks a figure, gives each of its thirteen parts a skill, and
+exports a file a printer can make. What we sell on this crossing is a print code: a token that stands for
+one print of a closed design, made by us. Its holder can keep it, trade it, or redeem it for the piece, and
+never receives the design file.
+
+Play. The worlds become games played in real rooms. A player opts in, in person, at a key room: a room
+whose keeper holds a gamemaster key, a signing key to which the house account gives a narrow set of
+powers. Players carry made pieces, and a chip inside a piece lets it prove which piece it is. People
+already pay for this: one platform reports more than $50 million paid to about 5,000 gamemasters since
+2019, by its own claim. The product is a format licensed to rooms that already exist, not a venue we build.
+
+Whose. The curriculum's essay, "Make Your Own, Kid!", puts it plainly: your kid already has an AI, and the
+question is whose. Prompt Craft answers it for one pair of hands: a student learns to hold the tool
+(section 18). imagINe nation gives the answer somewhere to live: CH313, the neighbourhood's own
+network, carries messages when the internet is down (section 20). The SESHAT Seed Project, as
+introduced by Uri Heru House, in conversation, answers it for the block: in the project's words, "a locally
+
+
+NEGUSTOLONOW                                                                                               page 7
+stewarded computational intelligence". Whose? The neighbourhood's. Not rented from a company far
+away. Grown on the block. Ossel already tells it as a story, where the machines do all the work and hold
+no authority. negustolonow is where a Seed would be fed, by hand, and where it would be put to work: at
+a table between two rooms that disagree (section 16).
+
+Under all of it runs one record: a token on AtomicAssets, a published standard for tokens, recorded on
+Vaulta, the public blockchain formerly called EOS, shown and traded on the AtomicHub marketplace, and
+issued from the account negustolonow .
+
+    State today: Two crossings run today. The third works in alpha. Play and the record are
+    designed. The Seed is exploring: nothing built, trained or run.
+
+
+
+
+4   Who is doing it
+TechniBears and Beelal Fakhouri. TechniBears is the Detroit studio that makes the tools: the Bear Engine
+underneath, Cody as the personal layer, and Backroom as the operator's surface. Technibears LLC is an
+existing Michigan company. Beelal founded it and wrote "Make Your Own, Kid!", the essay that sets out
+the curriculum.
+
+Ulysses Newkirk II and Red Door Digital. Red Door Digital is a print shop on Oakland Avenue in Detroit
+and the first key room; Ulysses holds the gamemaster key there. Red Door incubated TechniBears and
+built imagINe nation. The workshops are held at Red Door Digital.
+
+Rob Konsdorf, of FACINGS. FACINGS INC., of Southfield, Michigan, will issue our tokens and take payment
+by "credit cards or cryptocurrency". A public governance statement says FACINGS acquired AtomicHub
+in September 2025 and took over the stewardship of AtomicAssets. So every layer of the ledger except
+the chain itself is run from metro Detroit.
+
+imagINe nation. A neighbourhood of maker spaces in Detroit's North End, where people share tools,
+teach each other, and sell their own work through a common shop, 313af.space. Beelal is a member. It is
+the proof of concept for the social half of this proposal: people already share rooms, tools and a shop
+with no ledger at all. This document speaks for the studio only.
+
+The treasury's prospective signers. Beelal Fakhouri, Ulysses Newkirk II, Uri Heru House and Rob
+Konsdorf are proposed signers, not installed keyholders. Three-of-four is the draft threshold.
+The account remains controlled by its current single key until a verified permission migration.
+
+
+    State today: The studio, the print shop and the neighbourhood exist. No agreement with
+    FACINGS is signed, and the treasury is still under one key.
+
+
+
+
+NEGUSTOLONOW                                                                                      page 8
+5   What funding would support
+LINE         WHAT IT PAYS FOR
+
+The house    Printing and cutting the first pieces; the next worlds; the site as entertainment.
+
+The school Workshop seasons at Red Door Digital; the jewellery curriculum; printers, materials and kits.
+
+The tools    Backroom's Arena, from alpha to a product others can use.
+
+The ledger   FACINGS's work: the collection our tokens are issued under, print codes, chipped pieces, gamemaster
+             actions, game licences and items.
+
+
+How every workshop is budgeted. Every workshop is budgeted by the method published by Block by
+Block, the UN-Habitat Minecraft programme in which residents redesign a real public space. We use its
+published method and say whose it is; no partnership or endorsement is implied. It has seven steps: list
+all activities, set tentative budgets, assess current resources, identify the funding gap, engage partners,
+streamline, and validate. Its starting rule is ours too: no workshop is announced until the making is paid
+for.
+
+Amounts and terms are not set out here. They are to be discussed with those who are sincerely
+interested.
+
+
+
+Or give directly
+A gift in bitcoin can be sent to the address below. A gift is a gift: nothing is sold and nothing is promised
+in return. The address is controlled by the studio's founder today, and it will be recorded in the
+company's books once the company is formed.
+
+1KyvVdir4duAHWAqMPxJi66Uu5GRxdKy9u
+
+
+
+
+    The bitcoin address as a QR code, drawn by hand around the TechniBears bear. Check the address
+                                           before you send.
+
+
+
+
+NEGUSTOLONOW                                                                                               page 9
+How quadratic funding would work. Quadratic funding shares out a pool of matching money between
+pieces of work. Each one's match grows with the number of people who gave to it, not only with the
+amount: the match is proportional to the square of the sum of the square roots of the gifts. So a hundred
+gifts of one dollar draw far more matching than one gift of a hundred dollars, and many small givers
+count for more than one large one. The rules of each round and the size of its matching pool will be
+published before the round opens. The method's known weak point is telling one person from many,
+because one giver can split a gift across made-up names. So a giver who wants their gift to count
+toward matching opts in, in person, at a key room.
+
+   State today: The address exists and has received funds before. No round has been run. No
+   matching pool exists. No rules are published.
+
+
+
+What a funder's money is in law. One of three things, named before we accept it.
+
+THE SENDER GETS            IT IS                 SO
+
+Goods, or a seat in a      A sale                It is taxable.
+workshop
+
+Nothing, and nothing is A gift, but only if      It is not tax-deductible for the giver, because the recipient (the
+promised                nothing is promised      founder today, the company once formed) is not a qualified
+                                                 charitable organisation.
+
+A return, or a token       A security            It may be offered only under a named exemption (section 32).
+implied to rise in value
+
+
+An open decision. The company is designed with a funders' class. Whether that class opens at
+formation is not decided. The split between the makers' class and the funders' class is also not set; it is
+to be discussed with further mentorship.
+
+                 GRANTS AND SALES FIRST                AN ECONOMIC-INTEREST CLASS FROM THE START
+
+A funder         Goods, seats, or nothing promised.    An economic interest in the company.
+receives
+
+In law it is     A sale or a gift.                     A security, sold under one named exemption.
+
+It requires      A published statement of what         A filing, disclosure, and under the intrastate route escrow at a
+                 each payment is.                      Michigan bank.
+
+It costs         Funders hold no share of any          Funders may leave with their unspent share, so money cannot
+                 surplus.                              be committed years ahead.
+
+
+   State today: Four lines named. No exemption chosen. The company has accepted no funds,
+   because it is not formed.
+
+
+
+
+NEGUSTOLONOW                                                                                                   page 10
+6   The road
+WHEN   WHAT                                                     DONE WHEN
+
+Now    The house is public. The jewellery is print-ready. The   Anyone can walk the house and read negustolonow
+       Arena exports files. Workshops run.                      on a public Vaulta node.
+
+Next   Form the company. Move both accounts off single          A stranger can buy a printed piece and read its
+       keys. Print the three jewellery pieces. Create the       record on chain.
+       collection. Prove one chipped piece on the test
+       network, a copy of the chain used for trials.
+
+Then Jewellery through Prompt Craft workshops. Print            A student sells a piece they designed, and a player
+     codes from the Arena. The first key room opens             resells a licence.
+     sessions. Game licences and items on AtomicHub.
+
+Later The same path for anyone, at any age: other               A world exists that we did not write. A Seed runs in
+      neighbourhoods, other languages, other houses. The        one room, learning only from work the company has
+      assembly game. A first Seed is planted. The peace         voted to license. Two rooms that disagree settle a
+      table: two rooms, two Seeds, one real street.             real question and take it to whoever decides.
+
+
+    State today: The first row is true. Nothing in the second row has started.
+
+
+
+
+NEGUSTOLONOW                                                                                                 page 11
+PART B
+
+
+
+Product requirements
+7    The people it is for
+The visitor wants an evening somewhere else, and gets a house to walk through with no account, feed or
+score, and a figure and a docket to keep.
+
+The student wants to make a thing and say why it matters, and gets the path from concept sketch to
+final pitch, a finished piece, and a record under their own name.
+
+The player wants a game with real objects and other people in a room, and gets a table, a card, a figure,
+and items that outlast the session.
+
+The keeper, or gamemaster, runs a key room and wants a format that fills it weekly. They get a licence to
+run it, a key with narrow powers, and pay for their time.
+
+The maker wants to be paid for a piece, and again if it is resold. They get a capped edition, a record that
+travels with the piece, and a collection fee that marketplaces are encouraged, not forced, to pay.
+
+The funder wants to know exactly what their money buys, and gets a named classification, a public
+record of every vote and payment, and state lines that say what exists.
+
+    State today: Visitors and students exist. No player, keeper or funder has been admitted.
+
+
+
+
+8    Principles that bind every product
+    1. Value first. No token is issued for anything not already worth having without it.
+ 2. Say what exists. Every surface carries a state line. "None printed" stays until a piece is printed.
+3. The school is open and the house is closed. The Dummy figure and the curriculum can be taken
+   apart by anyone, and students own their files. The house's design files stay with us; the made piece is
+   what is sold.
+4. Consent is an object you hold. A card held out in the room means yes. A card put away means not
+   now.
+
+
+
+
+NEGUSTOLONOW                                                                                              page 12
+5. Nothing personal on chain. Not a name, not an age, and not a hash of either. A hash, also called a
+   fingerprint, is a short code computed from a text.
+ 6. No reward that is a coin. Nothing depends on a token's price.
+    7. No paid entry into anything decided by chance. Items are awarded for what a player did.
+8. Children are students, not labour. Their work is credited to them and held for them. Nothing is paid.
+
+     State today: Principles 1 to 3 are practised on the live site. The rest are written rules
+     for products not yet built.
+
+
+
+
+9    The house site
+The house is a static website that a visitor walks through. It is the setting for everything else and
+entertainment in its own right: closer to a novel you walk around in than to a shop.
+
+                                                                    EXISTS
+ID       REQUIREMENT                                                TODAY       DONE WHEN
+
+HS-1     The house pages must hold no accounts and make no          yes         A browser's network log shows
+         network calls of their own.                                            only the page's own files.
+
+HS-2 Every page must carry the pocket, with exactly three           yes         Every page shows both.
+     answers: Keep it, Not yet, Leave it.
+
+HS-3 The step must draw the figure only from what was kept, with    yes         The code redraws the same
+     no randomness, and give a code that rebuilds it exactly.                   figure on another device.
+
+HS-4 The pages must not show points, badges, streaks, counts or a   yes         A review and a text search find
+     feed, and must not use the words NFT, token or game.                       none.
+
+HS-5 Entering a figure on the ledger must happen on a separate      no          A figure is entered by its code,
+     claim page.                                                                and HS-1 still passes.
+
+HS-6 The three published Mercy Room objects must stay free to       partly      The dedication is on the page.
+     download, dedicated to Onyx Ashanti.
+
+
+Non-goals:
+
+     A shop front on the house pages.
+     Turning the site itself into a game.
+
+     State today: Built and public. The claim page is not built, and the dedication line is not
+     yet on the site.
+
+
+
+
+NEGUSTOLONOW                                                                                            page 13
+10     The objects and their records
+The objects are the goods: jewellery from Ossel, sculpted objects and garments from Mercy Room, and
+Dummy figures. Each piece sold carries its number in the seam, and that number opens its record.
+
+                                                                      EXISTS
+ID       REQUIREMENT                                                  TODAY         DONE WHEN
+
+OB-1     Every piece sold must carry its number in the seam, in the   partly        A made piece's tag opens its
+         form 0NN-EEE , and the number must open its Record page.                   page.
+
+OB-2 Each made piece must have one token stating its object           no            The token is visible on
+     number, piece number and material.                                             AtomicHub under negustolonow .
+
+OB-3 An edition's size must be fixed on the ledger before its first   no            The maximum supply can be
+     piece is entered.                                                              read on a public node.
+
+OB-4 Design files for new products must not be published or sold. yes               No new product page offers a
+                                                                                    file.
+
+OB-5 A piece's record must be transferable with the piece.            no            A second holder shows on the
+                                                                                    record.
+
+OB-6 A state line must stay true until a piece is printed or cut.     yes           Each page matches what has
+                                                                                    been made.
+
+
+Non-goals:
+
+     Closing the Dummy 13 base figure, which is soozafone's and stays open.
+     Holding stock of unsold pieces.
+
+     State today: The Record page and number format exist. Three jewellery pieces are print-
+     ready, none printed. No record issued.
+
+
+
+
+11     Print codes
+A print code is a claim on a piece that has not been made yet. Because the edition is capped on the
+ledger, a code for piece 7 of 9 is scarce in a way anyone can check.
+
+                                                                               EXISTS
+ID      REQUIREMENT                                                            TODAY     DONE WHEN
+
+PC-1    A code must stand for exactly one print of one closed design,          no        One code yields one piece
+        made by us or a maker licensed in writing, and must never deliver                and no download.
+        the design file.
+
+
+
+NEGUSTOLONOW                                                                                                page 14
+                                                                                  EXISTS
+ID      REQUIREMENT                                                               TODAY     DONE WHEN
+
+PC-2 The holder must be able to keep, trade or redeem the code.                   no        Each is done once on the
+                                                                                            test network.
+
+PC-3 The edition must be capped as the maximum supply of the                      no        Issuing one more than the
+     template, the pattern its tokens are made from.                                        cap fails on chain.
+
+PC-4 On redemption the code must be marked redeemed or burned                     no        A second redemption is
+     (destroyed), and the piece's record must take over.                                    refused.
+
+PC-5 A buyer must be able to pay by card, without holding                         no        A purchase completes with
+     cryptocurrency.                                                                        a card alone.
+
+PC-6 A code must not be redeemed for money, and its plain terms                   no        The terms are public and
+     must be published before the first sale.                                               an attorney has read them.
+
+
+Non-goals:
+
+     Download and print at home. The right to print means we print it for you.
+     A token that licenses a maker. A manufacturing licence is a signed contract for a fixed number of
+     pieces.
+
+     State today: Defined. Nothing built. We found nobody who sells a claim on a 3D print as a
+     token, so there is no model to copy.
+
+
+
+
+12     Backroom and the Dummy 13 Arena
+Backroom is the portal onto the engine: a chat that builds a playable game from a prompt, and the Arena,
+a parts bench set in Jaglavak 1963, one of the studio's worlds.
+
+                                                                             EXISTS
+ID      REQUIREMENT                                                          TODAY         DONE WHEN
+
+BR-1    The Arena must let a user pick a figure, give each of its thirteen   yes           A new user does this without
+        parts a skill and an augment, and detach and pose them.                            help.
+
+BR-2 The Arena must export a printable file for the open Dummy 13            partly        An export of a house design
+     base only.                                                                            is refused.
+
+BR-3 A figure's parts list (part, skill, augment, colour) must be            no            An Arena design is issued as
+     recordable as a print code, and house parts must print only                           a code on the test network.
+     against one.
+
+
+
+
+NEGUSTOLONOW                                                                                                   page 15
+                                                                        EXISTS
+ID      REQUIREMENT                                                     TODAY     DONE WHEN
+
+BR-4 The Arena must read a tap from a chipped part and give the         partly    A tapped part changes the
+     figure that part's skill.                                                    figure on screen.
+
+BR-5 The chat must build a playable game from a prompt.                 yes       A new user asks for a game
+                                                                                  and plays it.
+
+BR-6 Every surface that shows the Arena or sells a Dummy 13 print       not       An audit of every such
+     must credit soozafone under CC BY 4.0.                             checked   surface finds the credit.
+
+
+Non-goals:
+
+     Publishing the house's design files through the Arena.
+     A store for other publishers' games.
+
+     State today: Alpha, behind a login, and it works: figures load, parts detach, skills
+     assign, files export. Nothing from it is on the ledger.
+
+
+
+
+13    The game: table and assembly
+At the table, three to eight players and a gamemaster play a session set in a made-up place, Ossel first.
+At the assembly, tables or whole rooms send delegates to negotiate a real question, such as a shared
+tool, and vote on it. Carried one step further, with a Seed in each room, the assembly becomes the peace
+table (section 16).
+
+                                                                        EXISTS
+ID       REQUIREMENT                                                    TODAY     DONE WHEN
+
+GM-1     A table session must run with three to eight players and one   no        One session is run to the
+         gamemaster in one room.                                                  end.
+
+GM-2 A session must leave a docket of what was made and done,           no        The docket is printed and
+     ending in LOOK.                                                              entered on the record.
+
+GM-3 A player must be able to bring the figure from the step as their   partly    A code from the step loads
+     character, by its code.                                                      at the table.
+
+GM-4 What a part does in play must follow the Arena's skills: speed,    partly    A written rule sheet covers
+     shield, sensor, flight, map-shift, repair and echo.                          all seven.
+
+GM-5 The game must not charge entry to anything decided by              no        The rule sheet has no paid
+     chance.                                                                      draw.
+
+
+
+
+NEGUSTOLONOW                                                                                            page 16
+                                                                        EXISTS
+ID       REQUIREMENT                                                    TODAY    DONE WHEN
+
+GM-6 An assembly must end in a recorded decision that named             no       One decision and its ratifiers
+     humans ratified.                                                            are on the record.
+
+
+Non-goals:
+
+     Building a venue, or putting the game on the house's pages.
+     Claiming that role-play teaching is proven. The evidence is promising and modest.
+
+     State today: Designed. The rules that join the Arena, the step and the Dummy figure are
+     not written. No session run.
+
+
+
+
+14     Key rooms and the gamemaster key
+A play space is any room where the game is played. A key room is a play space whose keeper holds a
+gamemaster key. It is the only place a player can opt in. A scoped permission is a signing power limited
+to named actions.
+
+                                                                        EXISTS
+ID      REQUIREMENT                                                     TODAY    DONE WHEN
+
+KR-1    Nothing about a person must be recorded until they have opted   no       No record predates its
+        in, in person, in front of the keeper.                                   player's opt-in.
+
+KR-2 A room must become a key room only by a recorded vote, a           no       All three exist for Red Door
+     scoped permission on the house account, and a signed format                 Digital.
+     licence.
+
+KR-3 A gamemaster key must be able to open and close sessions at        partly   Each action is run once from
+     its own room, countersign presence, issue cards, enter dockets              the room's permission.
+     and hand out awarded items.
+
+KR-4 A gamemaster key must not be able to move treasury funds,          yes      Each attempt is refused on
+     touch a player's account, exceed an edition cap, act for another            the test network.
+     room, or change its own permissions.
+
+KR-5 A room's status must be read from the house account on chain,      partly   A test room is admitted,
+     never from an account's name, and must be removable by vote.                shown on a public node, and
+                                                                                 removed.
+
+
+Non-goals:
+
+     Opting in online.
+
+
+NEGUSTOLONOW                                                                                           page 17
+     Rooms that the company owns or builds.
+
+     State today: One key issued, with nothing linked to it. No room licensed, no session
+     opened.
+
+
+
+
+15     The card, and data as labour
+Every player who opts in receives a card tied to their key. Held out in the build space, the room where
+players make things, it means the player's work may be recorded and credited to them. The idea is from
+Eric Posner and E. Glen Weyl's Radical Markets (2018): the data people produce is work, and they should
+bargain over it together.
+
+                                                                        EXISTS
+ID       REQUIREMENT                                                    TODAY    DONE WHEN
+
+CD-1     Every player who opts in must receive a card that carries no   no       A read of the first card's chip
+         name and no personal data.                                              shows neither.
+
+CD-2 The card must have three states: out in the build space,           no       Out records the session under
+     away, and handed back.                                                      the player's key; away records
+                                                                                 nothing.
+
+CD-3 Only what a player deliberately does with the tools while the no            The room uses no cameras,
+     card is out may be recorded.                                                microphones or biometrics.
+
+CD-4 Pooled data must be licensed only by a vote of the players         no       One licence is voted and its
+     concerned, with proceeds paid to their own accounts.                        payments are on the record.
+
+CD-5 A player who hands the card back must keep everything              no       A returned card leaves the
+     already credited.                                                           account unchanged.
+
+CD-6 Players under 18 must take part as students, unpaid, and           partly   The player agreement says so,
+     nothing about a child under 13 may be collected without a                   and each such record has a
+     parent's verifiable consent.                                                consent.
+
+
+The promise is narrow and true:
+
+
+     A receipt for your work, a say in who uses it, and your share if it is ever sold.
+
+What is credited is also the only thing a Seed may ever be fed, and only by vote (section 16).
+
+Non-goals:
+
+     Surveillance of a room.
+
+
+NEGUSTOLONOW                                                                                                page 18
+     A promise of income. Data as labour has rarely been made to pay.
+
+  State today: Designed. No card issued. No data collected.
+
+
+
+
+16    The SESHAT Seed, and the peace table
+Whose? The neighbourhood's. The SESHAT Seed Project, as introduced by Uri Heru House, in
+conversation, is exploring an intelligence that a community grows and keeps for itself. Not rented from a
+company far away. Grown on the block. negustolonow is where a Seed would be fed, and where it would
+be put to work: at a table between two rooms that disagree. Nothing of it exists yet. This section sets the
+rules it would keep from the first day.
+
+
+
+What the Seed is
+In the project's own words, it is "a locally stewarded computational intelligence that can learn, remember,
+and grow in relationship with the people and communities it serves". It is called a Seed because it does
+not arrive finished: the project is creating, again in its words, "a foundation from which one can grow", and
+the seed carries seven principles: stewardship, trust, respect, curiosity, shared responsibility, resilience
+and regeneration. A finished thing can be rented. A seed has to be planted somewhere, by someone.
+
+Prompt Craft puts one pair of hands on the tool (section 18). CH313 gives the neighbourhood its own
+network (section 20). The Seed is what the block would grow on it, and it answers to the block. The
+project's rule is the mesh's own: "Local does not mean isolated." A community keeps its own knowledge
+and its own infrastructure, and stays on speaking terms with everyone else.
+
+
+
+What it is fed
+Data as labour is the Seed's diet, and the card is the switch. What players deliberately make and decide
+in the build space, cards out, is credited to each of them (section 15). Pooled, that record is the only
+thing a Seed may learn from, and only once a recorded vote of the company, cast by the players
+concerned (section 30), has licensed that use. Fed by hand. Never by watching.
+
+THE STATE               FOR THE PLAYER                           FOR A SEED
+
+Card out in the build   Their work is recorded and credited      It may learn from the pooled record, only after a
+space                   under their key.                         recorded vote.
+
+Card away               Nothing is recorded.                     It learns nothing about that player. No card, no
+                                                                 dinner.
+
+Card handed back        They keep everything already credited.   It takes nothing more.
+
+
+
+NEGUSTOLONOW                                                                                              page 19
+THE STATE               FOR THE PLAYER                           FOR A SEED
+
+Data key deleted        Their records are erased.                No promise that it forgets.
+
+
+No cameras. No microphones. No biometrics. Only what a person does with the tools, on purpose, card
+out. Under-18s take part as students, not as paid labour: their work is credited to them and held for them
+(section 8).
+
+
+
+How trust is grown
+SESHAT does not assume trust, and does not try to do without it. In the project's words, it wants trust to
+develop "through relationship, transparency, verification, shared experience, and demonstrated
+responsibility". Here, verification has a plain form: every claim is signed by whoever makes it.
+
+THE CLAIM                               WHO SIGNS IT
+
+"I was there"                           The player's own key
+
+"They were there"                       The room's gamemaster key
+
+"This session made this docket"         The room's gamemaster key
+
+"The Seed may learn from this"          A recorded vote of the company, executed by the keyholders
+
+
+A presence counts only with two signatures (section 24). A Seed holds no key and signs nothing. Nobody
+signs for anybody else. Trust is grown, not assumed.
+
+
+
+The peace table
+The assembly already sends rooms to negotiate a real question (section 13). The peace table carries it
+one step further, and it is a peace-building endeavour. Each room grows its own Seed. When two rooms
+that disagree meet, they do not start with speeches. They start with something to make.
+
+   On the table: objects, dockets, models, moves in a game, proposals.
+   On the books: a trade, shared budget, or proposed matching round only if funded.
+
+The Seeds carry and translate. Each brings what its block knows, in a shape the other side can pick up.
+People decide and ratify: no Seed signs for anyone, and nothing is settled until named humans in both
+rooms ratify it, as at the assembly (GM-6). Settle one real question, and the words can wait.
+
+
+   Skip the speeches. Make something together.
+
+
+
+
+NEGUSTOLONOW                                                                                         page 20
+The divide is always local and always concrete: two rooms, two blocks, two sides of a street. It is bridged
+by making something together, not by agreeing on words first. The evidence for role-play and Model
+United Nations learning is real but modest, so this is promising and not proven, and no outcome is
+claimed.
+
+
+
+A nod to Block by Block
+The peace table is played on a real place. That is a nod to the UN-Habitat Minecraft programme, Block by
+Block, in which residents rebuild a real public space in Minecraft, redesign it together, and put it in front
+of the officials who decide. We already use its budgeting method (section 5). Here we borrow two more
+of its moves, as an experiment:
+
+ 1. The board is the real street, in blocks. A street, a lot or a square, modelled so both rooms can walk
+    through it. Both sides build on it: proposals, trades and a shared budget, laid on the model where
+    both can see.
+ 2. The result goes on the desk of whoever decides. A landlord, a block club, a city department.
+
+Put the street on the table. The model is the board, and the real street is what is being negotiated.
+
+We take its warning too. Block by Block warns that participatory design without a serious commitment to
+build can raise false hopes and damage future civic participation. In our words: we don't hand out pencils
+for streets nobody means to build. As in section 5, no partnership or endorsement is implied. The
+programme's core funding was reportedly cut in 2025, so we will confirm its current form before
+anything is built on it.
+
+
+
+Requirements
+                                                                EXISTS
+ID     REQUIREMENT                                              TODAY     DONE WHEN
+
+SD-1   A Seed must learn only from the pooled record of work    no        A licence vote is on the record
+       done with cards out, and only after a recorded vote of             before a Seed reads anything.
+       the company licenses that use.
+
+SD-2 A Seed must learn nothing about a player whose card is     no        A session with a card away leaves
+     away or has been handed back.                                        nothing of that player for a Seed to
+                                                                          read.
+
+SD-3 Nothing a Seed reads may come from a camera, a             no        The room holds none of the three.
+     microphone or a biometric reading.
+
+SD-4 Every record a Seed reads must be signed by whoever        no        An unsigned record is refused, and
+     made it, and a Seed must hold no key and sign nothing.               no action accepts a Seed's signature.
+
+
+
+
+NEGUSTOLONOW                                                                                           page 21
+                                                                 EXISTS
+ID      REQUIREMENT                                              TODAY      DONE WHEN
+
+SD-5 Deleting a player's data key must erase their records, and no          A deleted key leaves nothing
+     no term may promise that a Seed forgets.                               readable, and the player agreement
+                                                                            promises no more.
+
+SD-6 At the peace table a Seed may carry and translate, and      no         One outcome and its ratifiers from
+     every outcome must be ratified by named humans in                      both rooms are on the record.
+     both rooms.
+
+SD-7 A real place must not be put on the table unless whoever no            A written commitment from whoever
+     decides about it means to build.                                       decides exists before the model is
+                                                                            started.
+
+
+
+What this is not
+     Not built. SESHAT is exploring; in the project's words, the Seed is "our attempt to begin cultivating" a
+     possibility. No Seed has been built, trained or run, and it learns from nobody today.
+     Not a mind. It is a computational intelligence, in the project's term, and nothing more is claimed for it.
+     Not a wage. What a Seed is fed is credited to the people who made it. Data as labour has rarely been
+     made to pay, and nothing here promises an income.
+     Not forgetting. Deleting a player's data key erases their records. It does not prove that anything a
+     Seed already learned from them is forgotten. How a Seed holds what it learns is an open design
+     question.
+     Not a judge. Seeds carry and translate. People decide and ratify.
+     Not a peace claim. No two rooms have met. No model of a real place has been built. No outcome is
+     claimed.
+     Not a partnership. Block by Block is a nod, and an experiment.
+
+     State today: Exploring. Nothing built, trained or run. No card issued, no data collected,
+     no Seed fed. No two rooms have met, and no model of a real place has been built.
+
+
+
+
+17    Accessories and chips
+An accessory is a house object that also does something at a table. It has three layers, in this order: the
+thing, worth wearing with no game at all; the record, its token; and the function, what tapping it does.
+NFC is the short-range radio a phone uses to read a tag by touch.
+
+
+
+
+NEGUSTOLONOW                                                                                            page 22
+                                                                         EXISTS
+ID      REQUIREMENT                                                      TODAY        DONE WHEN
+
+AC-1    Each accessory must be worth wearing or keeping with no game partly           A piece is sold to someone
+        at all.                                                                       who does not play.
+
+AC-2 Anything that trades must carry a signing chip whose private        no           One printed piece holds one
+     key cannot be read out.                                                          such chip.
+
+AC-3 Cards and low-value items may carry the cheaper chip, and           no           The label is on the card and
+     must be labelled "verified by the house".                                        in the terms.
+
+AC-4 A plain NFC tag must not be used for anything of value.             yes          No piece record points at a
+                                                                                      plain tag.
+
+AC-5 A tap must be readable in a phone's browser with no app, and a      no           The check passes with our
+     signing chip's tap must be checkable on chain without our                        server switched off.
+     server.
+
+AC-6 Pieces must be made to order against a print code.                  no           No accessory is produced
+                                                                                      without a redeemed code.
+
+
+Non-goals:
+
+     A yearly line of figures. Earlier toys of this kind failed on unsold stock; one publisher took a $147 million
+     charge.
+     Any reward that is a coin.
+
+     State today: Designed. No chip bought, no contract written.
+
+
+
+
+18     The workshops
+The school is "Make Your Own, Kid!": STEAM+E+D, which is science, technology, engineering, art and maths
+plus entrepreneurship and design. Its foundation is Prompt Craft, a way of making a clear request with
+four concepts: Subject, Action, Context, Style. The new line is jewellery making through Prompt Craft,
+with the docket ring on the table when the class starts.
+
+                                                                     EXISTS
+ID       REQUIREMENT                                                 TODAY        DONE WHEN
+
+WS-1     A workshop must not be announced until the making is paid   partly       Its budget is validated before its
+         for.                                                                     announcement.
+
+WS-2 Every student who designs a piece must leave with the           partly       Finished pieces equal students.
+     piece.
+
+
+
+
+NEGUSTOLONOW                                                                                                page 23
+                                                                       EXISTS
+ID       REQUIREMENT                                                   TODAY        DONE WHEN
+
+WS-3 Every workshop must be budgeted by the seven steps in             no           A filled sheet and its vote exist for
+     section 5 and validated by a recorded vote of the company.                     the first season.
+
+WS-4 If money falls short, activities must be cut and the making       no           A reduced budget shows fewer
+     must not be.                                                                   students before fewer finished
+                                                                                    pieces.
+
+WS-5 The curriculum must stay open, students must own their            yes          Every handout names the four.
+     files, and Prompt Craft must be taught as four concepts.
+
+WS-6 A jewellery student must write a small world, describe one        no           One student completes all six.
+     object from it, model it, print or cast it, enter it on the
+     ledger, and offer it through 313af.space.
+
+
+A budget sheet is drawn up for each season before it is announced.
+
+COST HEADING               WHAT IT COVERS FOR US
+
+Personnel and experts      Facilitators, the keeper, the print technician, the modeller, guest makers.
+
+Technology and             Printers, filament and resin, casting supplies, computers, a connection, cards and chips.
+hardware
+
+Design and consultation    The starting model, expert design time, the validation meeting.
+
+Operations and supplies    Meals, water, stationery, the room.
+
+Advocacy and outreach      Flyers, briefs and the docket slips.
+
+Making and after           Printing, casting, finishing, the seam number, the record; then maintenance and
+                           evaluation.
+
+Logistics                  Travel, contracted services, and grants to the rooms that host.
+
+
+Non-goals:
+
+     A workshop that ends in a file and an apology.
+     Paying young people for data or for play.
+
+     State today: Dummy figure workshops held. Jewellery workshops planned. No season's budget
+     sheet has been drawn up yet.
+
+
+
+
+NEGUSTOLONOW                                                                                                   page 24
+19    Out of scope for now
+     The wider Block by Block method. Modelling a real street and taking residents' designs to the people
+     who decide comes later. Only the budgeting method is used now. The peace table's street (section
+     16) is part of that later work.
+     The assembly game on a real street. It is designed for rooms first.
+     Planting a Seed. Section 16 sets the rules a Seed must keep. Growing one, feeding one and seating
+     two at the peace table come later (section 6).
+     A community currency. No token here is money or is redeemed for money.
+     Zero-knowledge proofs. On this chain they are research.
+     Any token whose value is its price.
+
+  State today: None of these is started, by decision.
+
+
+
+
+NEGUSTOLONOW                                                                                     page 25
+PART C
+
+
+
+Technical specification
+20   System overview
+COMPONENT           WHAT IT DOES                                  WHO RUNS IT                 STATE
+
+The house site      Static pages. No accounts and no network      TechniBears                 Live.
+                    calls of its own.
+
+The claim page      Enters a figure on the ledger by its code.    TechniBears, with FACINGS   Not built.
+
+Backroom and the    The chat that builds games, and the Arena.    TechniBears                 Alpha.
+Bear Engine
+
+The chain account   Authors the collection and holds the          One key today. Later the    No token issued.
+negustolonow        treasury.                                     four keyholders.
+
+FACINGS             Mints (creates) and launches tokens; takes    FACINGS INC.                No agreement
+                    card or cryptocurrency.                                                   signed.
+
+AtomicHub           The market where tokens are shown and         FACINGS, by its public      We have no
+                    traded.                                       statement                   collection there.
+
+The session and     Checks a tap; carries the gamemaster          Written with FACINGS        Not written.
+chip contract       actions.
+
+The card server     Checks a tap on the cheaper chip.             The house                   Not built.
+
+The key rooms       Hold a gamemaster key, run sessions, print.   Each keeper. Red Door       One key held.
+                                                                  Digital first.
+
+The record store    Holds encrypted session records, off the      The company                 Not built.
+                    chain.
+
+The mesh            CH313, low-power radios that carry            The neighbourhood           Not used by the
+                    messages when the internet is down.                                       game.
+
+A Seed              A computational intelligence a community      The community that grows    Not built.
+                    stewards, reading only pooled records         it, with the company as     SESHAT is
+                    licensed by vote (section 16).                steward                     exploring.
+
+
+
+
+NEGUSTOLONOW                                                                                           page 26
+How one printed ring travels through them.
+
+ 1. The design file stays in the studio. With FACINGS, the company creates a template for the ring under
+    the negustolonow collection, with a fixed maximum supply.
+ 2. A buyer pays by card on a launch page and receives a print code for one numbered piece. They may
+    trade it on AtomicHub.
+3. Whoever holds the code redeems it. The ring is printed or cast at the print shop, and a signing chip is
+   set inside.
+4. The piece record is issued with the ring's object number, piece number and material, and the chip's
+   public key is registered against it.
+5. The ring goes out with its number in the seam, which opens the Record page.
+6. At a table in a key room the ring is tapped. The contract checks the chip, and the Arena applies the
+   ring's function.
+ 7. If the ring is sold, its record goes with it. The token stays on the chain whatever happens to the
+    marketplace.
+
+  State today: The first three components run. The rest is unbuilt.
+
+
+
+
+21    Accounts and permissions
+How an account is controlled. A key is a pair: a private half that signs, and a public half anyone can
+check a signature against. A Vaulta account has named permissions, each a threshold plus a list of
+weighted keys. A multisig, short for multi-signature, is a permission that needs more than one key. The
+action updateauth changes a permission. The action linkauth binds a permission to one specific
+action, so that it can do that and nothing else.
+
+Facts verified on chain on 1 October 2026:
+
+     negustolonow was created on 29 December 2018. No contract is deployed on it. Its owner and
+     active permissions each have one key.
+
+     On 27 September 2026 it gained a permission named wilibansqnfa under active , with nothing
+     linked to it.
+     negustolo.gm was created on 25 September 2026 by the account gm . Its active key is the same
+     public key as wilibansqnfa .
+     negustolonow has authored no AtomicAssets collection.
+
+So the gamemaster key already sits on the house account as a separate permission, and today it can
+authorise nothing. Authority is added one action at a time. The name proves nothing: anyone can get a
+name ending in .gm . A room is a key room because the house account says so on chain.
+
+
+NEGUSTOLONOW                                                                                         page 27
+The permission ladder. The four keyholders are Beelal Fakhouri, Ulysses Newkirk II, Uri Heru House and
+Rob Konsdorf.
+
+                 TODAY               STEP 1              STEP 2                          STEP 3
+
+owner of         One key             A multisig of the   Unchanged                       Keyholders changed
+negustolonow                         four keyholders,                                    only by vote
+                                     three of four
+
+active           One key             Unchanged           Three of four. Every payment    Unchanged
+                                                         goes through eosio.msig :
+                                                         propose, approve, execute.
+
+Gamemaster        wilibansqnfa ,     Unchanged           Bound by linkauth to named      One scoped
+                 nothing linked                          game actions only               permission for each
+                                                                                         admitted room
+
+Players          None                None                First adult players, on their   Recovery set for
+                                                         own accounts                    every player
+
+Our own          None                None                None                            Deployed only if a
+contract                                                                                 vote approves
+
+
+eosio.msig is the chain's built-in multisig contract. The threshold of three of four is to be confirmed.
+Each keyholder makes their key on their own hardware device; no key is copied, typed into a chat or kept
+in a shared file.
+
+What a gamemaster permission is linked to. The actions in KR-3 (section 14), each limited by the
+contract to that permission's own room.
+
+Player accounts and recovery. A player's active permission is their own key alone, so spending never
+needs anyone else. Their owner permission is two of three: the player, a person they choose, and the
+house. The house alone can do nothing, and uses its share only at the player's request, in person at a key
+room. A phone's passkey may be used for convenience and must not be the only key. A child never holds
+sole keys; a parent or guardian holds the recovery share.
+
+  State today: Both accounts are single-key. If either key is lost, that account is lost. No
+  step taken.
+
+
+
+
+22   Tokens (Proposed)
+The collection. One AtomicAssets collection, authored by negustolonow . The standard supplies what
+the design needs: only authorised accounts can mint; a template can carry a fixed maximum supply;
+
+
+
+
+NEGUSTOLONOW                                                                                         page 28
+some data is fixed at minting and some can change; and each template has a switch for whether its
+tokens can be transferred or burned.
+
+                                EDITION                              FIXED AT         CAN CHANGE
+KIND           STANDS FOR       RULE             TRANSFERABLE        MINTING          LATER             WHO MAY MINT
+
+Kept figure    The figure the   One for each     Yes                 The figure's     Nothing.          The claim page.
+               step drew        claim. No cap.                       code and the
+               from what a                                           date.
+               visitor kept.
+
+Piece          One made         Maximum          Yes, with the       Object           Who watched       The company,
+record         piece.           supply equals    piece.              number,          it made; its      through
+                                the edition.                         piece            chip              FACINGS.
+                                                                     number,          registration.
+                                                                     material.
+
+Print code     A claim on one Maximum            Yes, until          The design       Issued or         The company,
+               print of a     supply equals      redeemed.           and piece        redeemed.         through
+               closed design. the edition.                           number.                            FACINGS.
+
+Card and       A player's opt- One for each      No                  The issuing      Active or         That room's
+access         in, and access player.                                room.            handed back.      gamemaster
+token          to rooms,                                                                                permission.
+               tools and print
+               time.
+
+Game item      A thing that    A cap set by      Yes, between        What it is       The sessions it   A gamemaster
+               matters in      vote.             players.            and does.        was used in.      permission,
+               play, such as a                                                                          inside the cap.
+               part that gives
+               a figure its
+               skill.
+
+Game           The right to     A cap set at     Yes: lent, resold   The game         Nothing.          The company,
+licence        play a game      publication.     or handed           and a                              through
+               our own                           down.               fingerprint of                     FACINGS.
+               engine made.                                          its terms.
+
+
+Game licences are issued first only for games our own engine makes, because a licence is worth what
+the game that honours it is worth. No token is described as "backed": on Vaulta the standard lists only
+EOS as a backing token.
+
+The life of a print code.
+
+ 1. Issued. Minted from a capped template and sold. It names the design and the piece number.
+ 2. Traded. The holder keeps it or passes it on.
+ 3. Redeemed. The holder asks for the piece. The code is marked redeemed, or burned.
+ 4. Made. The piece is printed or cast by us or a licensed maker. No file goes to the holder.
+
+
+NEGUSTOLONOW                                                                                                   page 29
+5. Record takes over. The piece record is minted to the holder with the seam number.
+
+  State today: Proposed. No collection, template or token. FACINGS has not confirmed that
+  its tools run on Vaulta.
+
+
+
+
+23     Proving a physical piece (Proposed)
+A plain NFC tag can be copied, proves nothing, and is never used for anything of value. Two chips are
+used.
+
+                                                                    WHO MUST BE
+CHIP                          WHAT A TAP PROVES                     TRUSTED           USED FOR
+
+NTAG 424 DNA, under a         A fresh code on every tap, checked by The house.        Cards and low-value
+dollar in volume              the house's server, which holds the                     items, labelled "verified by
+                              same secret as the tag.                                 the house".
+
+A signing chip such as HaLo   The chip holds a private key that     Nobody, for the   Jewellery, numbered
+by Arx, about $25 each in     cannot be read out, and signs a       check itself.     pieces, anything that
+small numbers                 challenge anyone can check.                             trades.
+
+
+The tap check, for a signing chip.
+
+ 1. When the piece is made, the chip's public key is registered against the piece record in the contract.
+ 2. The checker, a phone's browser or the room's device, builds a challenge: the piece's identifier, the
+    holder's account, and a fresh number the contract has not seen for that chip.
+ 3. The chip signs the challenge.
+4. The contract recovers the signing key with the chain's signature-recovery function,
+   assert_recover_key , and compares it with the registered key.
+5. If they match, the result is recorded and the fresh number is spent. If not, the action fails.
+
+The proof does not depend on our server. We found nobody who has built this on Vaulta; the published
+standards for it are written for another chain.
+
+What it does not prove.
+
+     It proves the chip, not the object. A chip can be dug out and set in something else.
+     It does not prove the person tapping is the holder, unless the holder's key also signs.
+
+So we say "this piece carries the chip tied to this record", and nothing stronger.
+
+
+
+
+NEGUSTOLONOW                                                                                             page 30
+  State today: Proposed. No chip bought, no contract written.
+
+
+
+
+24   A session, end to end (Proposed)
+ 1. Opt-in. On a first visit to a key room the player opts in, in front of the keeper. Their wallet shows the
+    player agreement as a Ricardian clause, the plain-language term attached to the action being signed
+    (section 29), and the player signs with their own key.
+2. Card. The room's gamemaster permission signs the issue of a card.
+3. Opening. The gamemaster permission signs the opening of a session at its own room.
+4. "I was there." The player puts the card out and signs a presence message with their own key, over the
+   session's identifier and a fresh number.
+5. "They were there." The keeper countersigns with the gamemaster permission.
+6. Play. Each event is signed by the player who made it. A tap is signed by the chip in the piece.
+ 7. Record. Each player's part of the session record is encrypted on their own device with their own data
+    key, then stored off the chain.
+8. Docket. The keeper closes the session and signs the docket: what was made and done, by account
+   and by piece, with no personal data. A fingerprint of the docket goes on chain.
+
+The two-signature rule. A presence counts only with both signatures, the player's and the room's.
+Neither can create attendance alone.
+
+With the internet down. The mesh is transport, not security: its channel encryption uses a shared key
+with no authentication, so anyone with that key can pose as anyone. So every event and presence is a
+signed message, which fits in one radio packet. The room's device checks each signature against the
+player's public key, drops anything else, and keeps the messages in order. When a connection returns,
+the keeper submits them, and the contract checks the same signatures before entering the docket. Until
+then the session is provisional on the record.
+
+  State today: Proposed. No action exists and no session has run.
+
+
+
+
+NEGUSTOLONOW                                                                                          page 31
+25   Data
+                           WHERE IT            ENCRYPTED WITH
+DATA ITEM                  LIVES               WHOSE KEY           WHO CAN READ IT     HOW IT IS ERASED
+
+Account names, votes,      On chain            Not encrypted       Anyone              It cannot be. So nothing
+payments, tokens, chip                                                                 personal is put there.
+public keys
+
+The docket's fingerprint On chain              Not encrypted       Anyone              It cannot be. The docket
+                                                                                       holds no personal data.
+
+A player's session         Off chain, in the   The player's own    The player          The data key is deleted.
+record                     record store        data key
+
+Wrapped (encrypted)        Off chain, with     A company key       Nobody, until the   Deleted with the data key.
+copies of data keys        the company         split among the     players concerned
+                                               four keyholders     vote to license
+                                                                   pooled use
+
+What a Seed may read:      Off chain, in the   The players' own    A Seed, for that    The data key is deleted.
+signed records in a        record store        data keys, opened   licensed use only   That erases the records,
+pooled use the players                         only under the                          not what a Seed may
+have licensed                                  licence                                 already have learned from
+                                                                                       them.
+
+The member register,       Off chain, in the   The company's key The managers and      Under the operating
+legal names, ages, bank    company's                             the attorney          agreement's retention rule.
+details, identity checks   records
+
+Voice recordings and    Off chain, in the      The company's key The managers          As above. No minor's voice
+bookplates (section 29) company's                                                      is recorded.
+                        records
+
+Card secrets for the       The card server     The house's key     The house           The card is retired and its
+cheaper chip                                                                           secret deleted.
+
+What a visitor kept in     The visitor's own Not applicable        The visitor, and    By the visitor.
+the house                  device, and the                         anyone given the
+                           figure's code                           code
+
+
+The rules.
+
+ 1. Nothing personal goes on the chain, and not an encrypted or hashed version of it either. A chain
+    cannot forget, and regulators have said that a hash of personal data is still personal data.
+ 2. Encryption happens on the player's device, before a record leaves it.
+ 3. A vote comes before any pooled use. The company holds wrapped keys only so that the players
+    concerned can license the pooled record.
+
+
+
+
+NEGUSTOLONOW                                                                                               page 32
+ 4. Show only what is asked. A player who must prove one fact shows that fact alone. The standards are
+    W3C Verifiable Credentials 2.0 and SD-JWT (RFC 9901).
+ 5. A Seed reads only what is signed and licensed. It may read a pooled record only after the players
+    concerned have voted the licence and the keyholders have executed it, and only records signed by
+    whoever made them: the player's key for their own work, the room's gamemaster key for the docket. It
+    holds no key of its own and signs nothing. No camera, microphone or biometric reading exists for it to
+    read.
+ 6. Erasure is of records, not of learning. Deleting a player's data key erases their records. It does not
+    prove that anything a Seed already learned from them is forgotten, and nothing here promises that it
+    is. How a Seed holds what it learns is an open design question, to be settled before any Seed is fed.
+
+  State today: Rules written. No record store, no data key, no data collected. No Seed fed.
+
+
+
+
+26   Security and failure cases
+WHAT CAN GO WRONG               THE DESIGNED RESPONSE
+
+A treasury keyholder loses a    Three of four still reach the threshold, and one key alone moves nothing. After a
+key, or has it stolen.          recorded vote the other three replace it.
+
+A player loses their key.       Their chosen person and the house restore it, at the player's request, in person at
+                                a key room.
+
+A chip is moved to another      A tap cannot detect it. The record names the object, material and seam number,
+object.                         so a mismatch is visible.
+
+A card is copied or lent.       Presence also needs the player's own signature.
+
+A room misbehaves.              Its permission runs only its linked actions, for its own room. A vote removes it.
+
+The marketplace changes         AtomicHub has done so before. The tokens live on the chain.
+hands.
+
+The mesh is spoofed.            Every message is signed by the player's key, and nothing counts until it settles on
+                                chain.
+
+A child's account.              A parent or guardian holds the recovery share, and nothing is paid.
+
+A payment arrives that nobody   It is held unspent and never treated as buying an interest.
+can classify.
+
+Personal data is written on     It cannot be erased, so no action accepts free text from a player.
+chain by mistake.
+
+A Seed's output is taken as a   A Seed holds no key, so no action accepts its signature. A proposal it carries
+decision.                       counts only when people vote and named signers execute it.
+
+
+
+NEGUSTOLONOW                                                                                                page 33
+  State today: Designed responses only. Until step 1 of the ladder, one lost key loses the
+  account.
+
+
+
+
+27   Build order
+ 1. Back up today's two single keys. Proof: a signed key register, kept off the chain.
+2. Prove one chipped piece on the test network. Proof: a tap on one printed piece, checked in a
+   transaction anyone can read.
+3. Prove one card on the cheaper chip. Proof: a tap accepted by the card server, and a copied tag
+   refused.
+4. Take step 1 of the ladder, once the operating agreement names the account. Proof: a public node
+   shows four keys and a threshold of three on owner .
+5. Take step 2. Proof: one executed eosio.msig transaction.
+6. Create the collection, on the test network first. Proof: it is visible on AtomicHub with a readable
+   maximum supply.
+ 7. Enter the first printed piece. Proof: a stranger reads its record from its seam number.
+8. Run the print-code cycle. Proof: one code issued, traded, redeemed and replaced by a piece record.
+9. Build the claim page. Proof: a figure entered by its code, with the house pages still making no
+   network calls.
+10. Run one session at Red Door Digital. Proof: one presence with two signatures, and a docket entered.
+11. Run one session over the mesh with the internet down. Proof: the docket entered after the
+    connection returns.
+12. Set recovery for every player. Proof: one account restored in a drill.
+
+  State today: Milestone 1 has not been started.
+
+
+
+
+NEGUSTOLONOW                                                                                         page 34
+PART D / COMPANY ARCHITECTURE
+
+
+
+
+28 The wrapper and the choice
+Negustolonow is a creative house and workshop programme, not a real-estate company. Its proposed legal wrapper would
+hold the common treasury, make contracts, employ or pay makers, licence the game to rooms, and administer rights that
+participants deliberately grant. This is an adaptation of the Red Door Digital DAO architecture, not a claim that the two
+organisations are the same.
+The Red Door route, translated
+Option 1 - Wyoming DAO LLC, operating in Michigan. The Red Door blueprint calls for a Wyoming DAO LLC and, when its
+Detroit activities constitute transacting business, a Michigan Certificate of Authority for a foreign LLC. Wyoming has a
+DAO-specific statute (W.S. 17-31), with required naming, registered agent, public smart-contract identifiers where
+applicable, and notice of possible restrictions on duties and transfers. A member-managed structure is the proposed
+starting point because no automated governance contract exists.
+
+Option 2 - Michigan LLC governed by a DAO-style agreement. This was the route in the previous version. It avoids
+maintaining a Wyoming entity plus Michigan foreign qualification. It can write member voting, multisignature treasury
+approvals and online ratification into its operating agreement, but it must not call itself a Wyoming statutory DAO LLC.
+A decision with consequences
+The two routes cannot be blended by rhetoric. A Wyoming registration is not a Michigan-organised issuer. In particular,
+Michigan MILE intrastate crowdfunding requires an issuer organised under Michigan law, among other conditions. If a
+Michigan-only securities offering matters, that is a material reason to prefer or separately examine the Michigan route. A
+securities attorney must resolve the structure before creating Class B interests.
+
+Wyoming-specific operating duties matter: the statutory notice on member rights, article/smart-contract amendments, the
+registered agent and annual filings, and dissolution after one year without approved proposals or action. The agreement
+should set a real governance cadence, not a sham heartbeat.
+
+  State today: No new company has been formed, no route approved by counsel, and no members admitted. TechniBears LLC is
+  an existing, separate Michigan company.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                     page 35
+PART D / THREE LAYERS
+
+
+
+
+29 The contract stack
+Red Door supplies the organising pattern: (1) an off-chain legal contract, (2) on-chain execution, and (3) a human-readable
+Ricardian bridge. The three must be versioned and connected, but no signature technique alone guarantees judicial
+enforceability.
+
+ Legal master               Articles of organisation and operating agreement identify the entity, members, class rights, decision
+                            thresholds, delegated powers, exit rules, conflict policies, IP and data licences, bank signers and dispute
+                            forum. They contain the actual obligations.
+
+ Execution record           Vaulta account permissions, timestamped proposal records, signatures and treasury transactions
+                            document execution. Start with narrowly scoped permissions and manual multisignature approvals; a
+                            custom contract comes only after a security review.
+
+ Ricardian bridge           Publish stable text for each action and terms version. Include a document ID, jurisdiction, rights
+                            conferred, party, signature method, effective time, amendment rule and hash. Verify how the actual
+                            wallet renders it; display is not automatic in every client.
+
+
+The hierarchy is a legal question
+The earlier line, "where paper and chain disagree, paper governs," is too absolute for a Wyoming DAO LLC. Wyoming law
+gives particular priority to articles and smart contracts in defined conflicts (W.S. 17-31-115). The operating agreement
+must be drafted to reconcile those rules. The controlling hierarchy and emergency correction process are an attorney
+deliverable, not an application default.
+The voice and the bookplate
+Red Door proposes reading the agreement aloud, retaining a recording, and signing a dated bookplate. Keep that ceremony
+as a record of deliberation and stewardship. It does not by itself transfer membership, title, or a legal share. Admission
+requires the actual articles/agreement, member register, signatures, and any applicable issuance or securities
+documentation. Keep recordings off-chain, with explicit consent and retention rules; do not record minors.
+
+  State today: Contract terms, key custody, member register, Ricardian display and acceptance flows are proposals, not deployed
+  or legally vetted.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 36
+PART D / GOVERNANCE
+
+
+
+
+30 Three classes; three rights
+Copy the roles-and-rights architecture from Red Door, not its tenants, community land trust, revenue percentages or
+mailbox leases. Tokens are evidence or access mechanisms only to the extent the signed contracts actually grant the rights.
+
+ Class A - makers and        Proposed governing members: admit rooms; approve budgets, makers, editions and vendor
+ keepers                     engagements; appoint or remove signers. Any payment for work is a contract or approved
+                             compensation, not automatically an investment distribution.
+
+ Class B - funders           Optional economic membership interests, if counsel approves an offering route. Percentages,
+                             governance limits, vesting, transfer restrictions and distributions are UNSET. These may be securities
+                             even if issued without a token.
+
+ Class C - players and       A card and narrowly defined product/access licence; no company equity, no promised financial return.
+ students                    Adults can separately join a class only through explicit admission. Under-18s participate through
+                             education/guardian arrangements, not an investment class.
+
+
+How a proposal moves
+   Draft. Named human sponsor; scope, cost, conflicts, rights affected, term and transaction payload.
+   Review and vote. Eligibility, quorum, class consent, notice and waiting period are in the master agreement. A data licence also
+   requires each relevant person's permission; a company vote alone cannot grant it.
+   Execution. Independent approvers compare the transaction with the approved proposal and execute through the entity treasury.
+   Contract-side checks enforce room-specific limits.
+   Audit. Publish proposal identifier, permitted vote totals, relevant transaction IDs and financial summaries; keep legal names,
+   minors' records and personal information off the chain.
+Four named signers are proposed: Beelal Fakhouri, Ulysses Newkirk II, Uri Heru House and Rob Konsdorf; three-of-four is
+a draft threshold. Rob's FACINGS role creates a related-party issue for FACINGS engagements. He should not sponsor,
+vote on or sign a conflicted vendor transaction, subject to counsel-approved rules; the remaining three would all need to
+sign under this threshold.
+
+  State today: Class definitions are proposals. No Class B issued; no voting period, quorum, distribution, conflict rule or member
+  transfer agreement approved.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                   page 37
+PART D / TREASURY
+
+
+
+
+31 The financial engine
+The Red Door blueprint names Omnitrove, a delegated real-world asset manager and a 52/48 distribution trigger. Those
+are Red Door-specific proposals. For Negustolonow, copy the accounting principle and separation of authority, not the
+providers, capital structure or allocation.
+
+ Pot 1 - player assets     A player-controlled wallet is not the company treasury. A child's wallet, if used at all, requires guardian
+                           safeguards. No blanket assertion that every asset is recoverable is justified.
+
+ Pot 2 - entity assets     The LLC owns its bank accounts and, after formal assignment/control changes, its designated Vaulta
+                           treasury account. Named authorised signers pay salaries, materials, vendors, taxes and refunds.
+
+ Books and controls        Record every incoming amount as goods/service sale, non-deductible gift, grant or a separately
+                           compliant investment. Reconcile fiat and digital balances; require budgets, receipts, disbursement
+                           approvals and dual review.
+
+
+Bank first; chain with reconciliation
+A Michigan-facing operating business needs suitable banking, card processing, tax registrations, refunds and financial
+controls. Omnitrove is a possible treasury tool after independent diligence, not a bank or proven universal off-ramp.
+FACINGS card settlement, cash-out and company custody need written agreements and a live tested flow before launch.
+
+Never say every gift is matched: no matching pool has been funded and quadratic-funding rules have not been published.
+Do not take investment proceeds through a founder wallet or treat a crypto transfer as a compliant securities subscription.
+Offering exemptions, investor verification and custody/escrow rules need separate counsel review.
+
+No 52/48 revenue split is adopted. No distribution should be scheduled without solvency, tax, minority-rights and
+operating-agreement checks. A proposed maker collection fee is marketplace-dependent, not an enforceable resale royalty
+across all sales.
+
+  State today: No new-company bank account, finance mandate, Omnitrove integration, matching pool, Class B issue or automatic
+  sweep exists.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 38
+PART D / LOCAL LAW
+
+
+
+
+32 Wyoming in Detroit
+Formation and foreign qualification
+If the Wyoming DAO LLC route is chosen: file Wyoming DAO LLC articles, obtain a Wyoming registered agent, include
+required notices and applicable smart-contract identifiers, and determine whether Michigan foreign LLC registration (LARA
+form 760) is required for actual Detroit operations. Obtain state and local tax, zoning, licensing, insurance and employer
+advice as the activities require. The Detroit workshop is a location, not evidence the new entity is already authorised there.
+Offering and member-rights review
+Wyoming's DAO statute does not excuse federal securities rules or Michigan rules that apply to offers and business
+conducted there. The Michigan MILE exemption cannot simply be imported to a Wyoming-organised issuer. Federal Rule
+506, Regulation Crowdfunding and other paths are possibilities to examine, not pre-approved alternatives.
+
+Wyoming member rights may be materially different from an ordinary LLC, including the statutory notice, default
+treatment of member interests, transfers, withdrawals, default voting/quorum, fiduciary duties and dissolution. The
+company documents must state actual rules and should contain no promise that a departing funder receives all unspent
+money.
+Other obligations
+   A token representing a physical print does not alone transfer legal title or remove sales-tax, consumer, delivery or refund duties;
+   those terms belong in the sale.
+   Minors' workshop work requires guardian and safeguarding policies; credit, IP licences and any commercial use need consent, not
+   an assumption that unpaid student labour is unregulated.
+   Public blockchain activity may be linkable to identity. Attendance logs, children's work and personal data should stay private, with
+   data minimisation and specific licensing.
+   No paid chance-based prizes, no guarantee of exchange value, no claim that "utility" status by itself resolves securities, gaming or
+   money-transmission questions.
+
+  State today: Draft direction only. Obtain Michigan and Wyoming counsel and a written tax/securities analysis before formation
+  and solicitation.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 39
+PART D / RED DOOR CONCORDANCE
+
+
+
+
+33 What we copy; what we do not
+ Keep intact               Three-part contract stack; role-based three-class architecture; human-voted governance; a real bank
+                           beside an auditable chain; local making and digital twins; intergenerational skill transfer.
+
+ Adapt to the house        Class A becomes makers/keepers; B is optional funders, not a CLT; C becomes players/students, not
+                           virtual leaseholders. Production dockets replace real-estate parcel logistics.
+
+ Exclude                   Red Door's 52/48 split; "ESOP" as a loose term; physical tenant leases; USPS 4C mailboxes and 1:5
+                           locker rule; BG Lionstar as assumed manager; any implication that access tokens equal crowdfunding.
+
+ Do not overclaim          A voice/bookplate is not a share certificate; a Ricardian clause is not assured enforceability; Nextcloud
+                           is not automatically a web/captive portal; a mesh radio is not a broadband Wi-Fi replacement.
+
+
+5t-0_0-piD: educational parallel, not the Seed
+The blueprint also proposes 5t-0_0-piD, a cross-generational print-shop assistant: older craftspeople teach production
+rules while young makers build the interface, file routing and control logic. That fits Make Your Own, Kid! as a workshop
+path. It is not evidence a local community intelligence is trained or operating.
+
+The last print-shop direction in the source changes from Fiery to Canon PRISMAsync, alongside OrcaSlicer for 3D
+preparation. Those require separate, permissioned integrations. OrcaSlicer is a slicer, not by itself a shop-wide scheduler. A
+Pi 5 with 1GB cannot be assumed to run Nextcloud, Minecraft and a local language model together; the standard AI HAT+
+accelerates selected vision workloads, while AI HAT+ 2 supports local generative models.
+
+The Red Door PDF also contains long AI-chat demonstrations, suggested events, prototype ideas and unverified technical
+outputs. Only its stated intentions and actual tested deliverables should enter investor material, each marked as a plan or
+as completed evidence.
+
+  State today: Red Door source reviewed as a planning document. No joint entity, technology deployment or written partner
+  contract established by the PDF.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                              page 40
+PART D / EVIDENCE PATH
+
+
+
+
+34 The order to make it real
+   1. Assign the scope: TechniBears products and IP, workshop provider, proposed DAO, issuer and holders. Obtain written
+   permissions to name partners.
+   2. Select the jurisdiction: Michigan/ Wyoming comparative memo from counsel, including MILE eligibility, banking, tax and
+   member rights.
+   3. Sign the legal master: articles, agreement, member register, class rights, governance/conflict policy, IP and data terms. Add
+   optional voice/bookplate ceremony afterward.
+   4. Secure the account: identify and back up existing keys, assign the treasury to the entity, trial owner/active threshold changes
+   and recoverability. Reconcile bank and chain. No payment by an undisclosed related party.
+   5. Prove one good: print one of the three print-ready jewellery pieces, produce an order/production record and document the
+   seller's consumer obligations.
+   6. Prove optional ledger: agree issuer terms with FACINGS, test the collection on the chosen chain, issue one capped print claim
+   and redeem it for one numbered piece; test the no-chain fallback.
+   7. Prove optional chip: independent challenge-response in a real browser; assess chip transplantation, replay, phone coverage and
+   contract verification. Never market it as object identity.
+   8. Run a real room: paid and consented workshop, guardian controls, two-person attendance and clearly measured outcomes.
+   Keep children off the public ledger.
+   9. Add game/access rights: only after contracts and room powers are tested, then measure fulfilment, customer support and
+   resale limitations.
+   10. Explore local AI: separate educational 5t prototype from SESHAT; obtain individual data licences before any pooled use and
+   independent governance vote thereafter.
+What a first funder should underwrite
+A bounded pilot: one printed design, one real workshop, one human-readable contract stack, one independently checkable
+production record and a public cost/fulfilment report. The ledger and Seed remain optional milestones, not prerequisites
+for a useful object.
+
+  State today: None of the new-entity, ledger, chip, game or Seed milestones is represented as completed. Existing
+  house/Arena/workshops remain separately documented.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 41
+PART E / OPEN DECISIONS
+
+
+
+
+35 What is settled and open
+What we can say now
+   The house site exists. Print-ready jewellery meshes and the Arena alpha exist. Workshop activity is reported at Red Door.
+   Production, paid sales, game, token issuance, new entity and SESHAT remain future milestones.
+   Negustolonow prefers value before any token; the on-chain record is a supporting receipt for a physical/digital right written in
+   plain language.
+   The Red Door blueprint supplies a proposed governance pattern: legal master, on-chain execution, readable Ricardian bridge,
+   three different stakeholder rights, and a real-world operator.
+   Existing Vaulta accounts are under their current single-key arrangements unless and until a verified authorisation change occurs.
+   Four prospective signers and three-of-four are an unexecuted draft.
+The decisions still requiring actual approval
+
+ Legal route                 Wyoming DAO LLC with Michigan foreign qualification, or Michigan LLC with DAO-style operating
+                             agreement; legal analysis and chosen state formation documents.
+
+ Membership                  Class A eligibility, optional Class B offering route and economics, Class C terms, minor protections,
+                             quorum and veto/dispute process.
+
+ Partner contracts           Red Door operator/site agreement; FACINGS issuing/payment scope; ownership and brand
+                             permissions; any 313af.space commerce terms.
+
+ Treasury                    Keyholder appointments and recusal, payment classification, banking/processing, custody, fiat/chain
+                             reconciliation and the future of the founder-controlled BTC address.
+
+ Product pilot               First manufactured object, price, fulfilment terms, the first funded workshop and the viability of token
+                             redemption.
+
+ Privacy and AI              Informed data licences, guardian controls, encryption architecture, independent evaluation of
+                             5t-0_0-piD, and any separate SESHAT research protocol.
+
+
+
+  State today: The decision log now records the corporate route as OPEN, not chosen. No stakeholder class, investment terms or
+  issuer mandate has legal effect.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 42
+PART E / RISKS
+
+
+
+
+36 Failures we must design for
+ Formation mismatch         Copying a Wyoming DAO LLC label while using Michigan-only filing/rights; obtain jurisdiction memo
+                            and correct articles, notice, operating agreement and tax plan.
+
+ Class B solicitation       Calling an economic interest a token, donation or access card does not remove securities requirements.
+                            Do not offer it before exemption, disclosures, custody and agreements are resolved.
+
+ Treasury keys              Single-key loss, signer collusion and a vendor conflict. Backups, testnet rehearsals, hardware keys,
+                            independent approvals and a recusal procedure are gating controls.
+
+ Supplier certainty         FACINGS, Red Door, AtomicHub and Omnitrove are distinct relationships; no vendor is treated as
+                            contracted or tested solely on the basis of the blueprint.
+
+ Object provenance          A token cannot manufacture an object; an NFC chip can be transplanted. Document production, the
+                            handover, consumer rights and tamper/replacement processes.
+
+ Children and data          Public accounts may be linkable; training can persist beyond key deletion. Use individual permission
+                            and guardian controls, minimised off-chain records and no claims of guaranteed model unlearning.
+
+ Mesh and offline           RaspAP provides local access; Meshtastic supports small messages; an internet tunnel needs
+                            connectivity. Demonstrate a no-internet session, not an assumed "offline web".
+
+ Edge AI capability         Pi 5 at 1GB and ordinary AI HAT+ will not support the proposed entire
+                            generative-AI/Nextcloud/Minecraft stack. Scope hosts and accelerators and benchmark.
+
+ Funding promise            No live quadratic funding or guaranteed matched gift; never solicit on the basis of an unfunded
+                            matching pool.
+
+ Speculative peace          SESHAT and a mediated public-space peace table remain research ideas. No two-room resolution or
+ outcomes                   civic implementation has been demonstrated.
+
+
+Partner conflict
+Rob Konsdorf's prospective role at both the issuer and treasury requires disclosure, nonparticipation in the relevant
+governance approval and an independent commercial review. Under a three-of-four threshold, the other three all have to
+approve and sign; the agreement needs a fallback for unavailable signers.
+
+  State today: These risks remain open. A plan or source document is not evidence that any mitigation has been tested.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                  page 43
+PART E / LANGUAGE POLICY
+
+
+
+
+37 Words and claims that hold
+ Do not say                 Say instead
+
+ "Registered DAO"           "Proposed Wyoming DAO LLC / Michigan foreign qualification, or Michigan LLC with DAO-style
+                            governance; jurisdiction to be chosen."
+
+ "Paper always prevails"    "The legal hierarchy is jurisdiction-specific; articles, operating agreement and smart-contract priority
+                            require counsel review."
+
+ "Every partner holds a     "Four prospective signers have been named; the existing accounts still require a verified permission
+ key"                       migration."
+
+ "The class owns 48%"       "Class B economics are unpriced, unsigned and optional; Red Door's 52/48 distribution does not
+                            apply."
+
+ "Access is                 "Class C is product access only, with no investment rights; economic interests require a separate
+ crowdfunding"              compliant offer."
+
+ "Your donation is          "Quadratic matching is being researched; no matching pool or round exists."
+ matched"
+
+ "Bookplate proves          "A bookplate marks an individual's signed participation; admission and legal rights follow the governing
+ ownership"                 documents."
+
+ "The Seed forgets you"     "Records can be deleted subject to system design and retention; prior model learning may persist."
+
+ "An AI HAT runs the        "A particular edge model must be measured on compatible host and accelerator; ordinary AI HAT+
+ assistant"                 does not support LLM inference."
+
+ "The mesh is secure        "RaspAP is local Wi-Fi; Meshtastic is low-bandwidth message transport; signatures and access controls
+ Wi-Fi"                     are separate."
+
+ "The NFT proves the        "The record identifies a claim or piece; a cryptographic chip authenticates its own key, not the entire
+ object"                    object."
+
+ "The market enforces       "Any secondary fee depends on the specific marketplace or contractual resale route."
+ royalties"
+
+
+Keep the words "State today" at every stage. A proposal becomes a claim of completion only when the proof is dated,
+inspectable and supported by the responsible party.
+
+  State today: This supersedes the conflicting Michigan-only and matched-funding language in the earlier glossary.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 44
+WE WILL NOT SAY                         WE SAY
+
+The Seed decides; peace by AI           The Seeds carry and translate; people decide and ratify
+
+In partnership with Block by Block      After the UN-Habitat Minecraft programme, Block by Block: a nod, and an
+                                        experiment
+
+
+  State today: In force for this document. Nothing has been said publicly about the company.
+
+
+
+
+38    Sources
+All sources were checked on 1 October 2026. Items marked (secondary) were read from a news
+summary. Michigan statute text was read on a mirror; an attorney should re-read each section cited. This
+document is not legal advice.
+
+
+
+On chain, and the ledger partners
+     negustolonow and negustolo.gm : public queries against Vaulta nodes (eos.greymass.com,
+     eos.eosusa.io).
+     The standard's configuration on Vaulta: https://eos.api.atomicassets.io/atomicassets/v1/config
+     FACINGS: https://facings.io/
+     Governance proposal naming FACINGS as AtomicHub's acquirer: https://gov.xprnetwork.org/
+     communities/6/proposals/69b31b942919e9213c6ca379
+     A conflicting account of the current operator (secondary, unconfirmed): https://
+     underpunks.medium.com/history-of-atomichub-nft-marketplace-2019-2026-1f7b1b3c4ab9
+     AtomicHub: https://atomichub.io/
+     The AtomicAssets standard: https://github.com/pinknetworkx/atomicassets-contract
+     Vaulta's rebrand: https://www.coindesk.com/business/2025/03/17/eos-rebrands-to-vaulta-as-it-
+     shifts-focus-to-web3-banking
+     Accounts and permissions: https://docs.antelope.io/docs/latest/protocol/accounts_and_
+     permissions/
+     Passkeys: https://github.com/wharfkit/webauthn
+     Signature checks inside contracts: https://github.com/AntelopeIO/spring/blob/main/libraries/chain/
+     webassembly/crypto.cpp
+
+
+
+
+NEGUSTOLONOW                                                                                             page 45
+The value problem and the game
+   The September 2023 study, read through a news report: https://www.thefader.com/2023/09/21/95-
+   percent-of-nfts-worthless-study-finds
+   2025 market sales: https://cointelegraph.com/news/nft-supply-growth-sales-decline-2025
+   Courtyard (company source): https://courtyard.io/blog/post/courtyard-io-raises-30-million-series-
+   a-to-reimagine-collecting-71e8c1e9ef05
+   Robot Cache (secondary): https://en.wikipedia.org/wiki/Robot_Cache
+   Gamemaster payouts (company claim, secondary): https://www.ttrpginsider.news/p/pay-to-play-
+   the-business-of-the-professional-dungeon-master
+   The $147 million charge: https://icv2.com/articles/news/view/34453/disney-shutting-down-disney-
+   infinity-takes-147-million-charge
+
+
+
+Chips, data and the mesh
+   NTAG 424 DNA: https://www.nxp.com/products/rfid-nfc/nfc-hf/ntag-for-tags-and-labels/ntag-424-
+   dna-424-dna-tagtamper-advanced-security-and-privacy-for-trusted-iot-
+   applications:NTAG424DNA
+   The HaLo signing chip: https://github.com/arx-research/libhalo
+   The physical backed token standard on another chain: https://eips.ethereum.org/EIPS/eip-5791
+   Posner and Weyl, Radical Markets (Princeton, 2018), chapter 5: https://www.degruyterbrill.com/
+   document/doi/10.1515/9780691196978-009/html
+   Streamr on data unions: https://blog.streamr.network/an-update-on-data-unions-and-first-look-at-
+   rail-on-chain-group-payments-for-web3/
+   Regulator's guidance on personal data and blockchains: https://www.cnil.fr/en/blockchain-and-gdpr-
+   solutions-responsible-use-blockchain-context-personal-data
+   SD-JWT: https://www.rfc-editor.org/rfc/rfc9901.html
+   Mesh encryption limits: https://meshtastic.org/docs/about/overview/encryption/limitations/
+   The federal children's privacy rule: https://www.federalregister.gov/documents/2025/04/22/2025-
+   05904/childrens-online-privacy-protection-rule
+
+
+
+Block by Block, Dummy 13 and the dedication
+   Block by Block: https://www.blockbyblock.org/about/
+   Dummy 13 by soozafone, CC BY 4.0: https://www.printables.com/model/981111-dummy-13-version-10
+   Onyx Ashanti: https://www.foundationforcontemporaryarts.org/recipients/onyx-ashanti/
+
+
+
+
+NEGUSTOLONOW                                                                                    page 46
+Law
+   Michigan Limited Liability Company Act, MCL 450.4101 et seq., including 450.4102, .4204, .4207, .4303,
+   .4304, .4305, .4307, .4401, .4501, .4502, .4509, .5002 and .5101.
+   Michigan Uniform Partnership Act, MCL 449.6 and 449.15.
+   Michigan Uniform Securities Act, MCL 451.2102c, and the Michigan Invests Locally Exemption, MCL
+   451.2202a.
+   Michigan Money Transmission Services Act, MCL 487.1001 et seq., and 487.1004.
+   Michigan Youth Employment Standards Act, MCL 409.101 et seq.
+   Michigan Penal Code, MCL 750.301, 750.310b and 750.372. Breach notification, MCL 445.72.
+   Wyoming DAO Supplement, W.S. 17-31: https://sos.wyo.gov/Forms/WyoBiz/DAO_Supplement.pdf
+   CFTC v. Ooki DAO (N.D. Cal. 2023).
+
+
+
+The SESHAT Seed Project
+   Introduced by Uri Heru House, in conversation; description as passed on by Beelal Fakhouri, 2 Oct
+   2026. It is the only source on SESHAT, and the quotations in sections 3 and 16 are from it.
+
+
+
+Working documents
+   The studio's own records, from which this document is condensed: 55-product.md , 56-make-your-
+   own-kid.md , 57-negustolo-dao-llc.md , 58-inbox.md , 60-seshat-seed.md .
+
+
+  State today: Every source was read on the date given. No legal source has yet been checked
+  by an attorney.
+
+
+
+
+NEGUSTOLONOW                                                                                     page 47
+TECHNICAL CORRIGENDUM
+
+
+
+
+Appendix I - Offline and edge architecture
+The Red Door operational sketch names PaperMC/Minecraft, Nextcloud, RaspAP, Meshtastic, Raspberry Pi, Nvidia Jetson,
+Canon PRISMAsync and OrcaSlicer. These technologies solve different problems. Treat them as a modular experiment, not
+one ready-made platform.
+
+ LAN and portal              RaspAP may manage a local wireless access point; an HTTPS service/portal must be built and hosted
+                             separately. Nextcloud is a file and collaboration platform, not the captive portal, WordPress, or public
+                             tunnel itself.
+
+ Community mesh              Meshtastic carries low-bitrate, signed status/events and short messages. It does not carry Minecraft
+                             sessions or full internet access. Do not claim one whole authenticated event fits a packet until
+                             byte-budget tests pass.
+
+ Game and files              PaperMC requires a properly sized host and compatible Java version. Nextcloud needs supported
+                             deployment, storage, updates and backups. A public tunnel works only when an upstream internet
+                             connection exists.
+
+ Production                  A shop-controlled queue API or bridge must mediate Canon PRISMAsync and 3D printers. OrcaSlicer
+                             exports toolpaths; it is not a validated multi-printer scheduling service by itself.
+
+ Local AI                    The standard Raspberry Pi AI HAT+ does not run LLMs; the HAT+ 2 or suitably sized Jetson/other host
+                             can be evaluated for on-device models. A Pi 5 with 1 GB is a thin controller, not the entire stack.
+
+
+Required pilot tests
+   Print-shop device inventory, API/licence permissions, protected operator controls and a manual override.
+   No-internet drill with RaspAP/Meshtastic; distinguish local-Wi-Fi availability from mesh reachability.
+   Measured memory/load, thermal and model-licence budgets before naming hardware as a production specification.
+
+  State today: This is a design correction to the Red Door workshop vision, not a claim the stack has been installed.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                                page 48
+TECHNICAL CORRIGENDUM
+
+
+
+
+Appendix II - Rights and provenance
+Physical goods + tokens
+A printed part, its on-chain record and its legal rights are three separate things. Publish the object specification,
+edition/piece number, delivery/refund warranty, licensed design use and transfer conditions. A token does not force
+off-chain delivery or continued hosting. Signing NFC proves a response from one chip key, not the unaltered identity of
+the piece.
+Accounts and permissions
+A restricted Vaulta permission is not sufficient by itself to confine a gamemaster to a room. Each game action must check
+caller account, permission, venue, nonce and role inside the executing contract. Hardware-backed keys, approvals,
+revocation, testnet rehearsal and audit trails are acceptance criteria. Never equate token ownership with the actual holder
+of a physical object unless a documented handover links them.
+Consent and children
+The player card signifies a physical choice only when a documented off-chain process defines that choice. Guardian
+verification, withdrawal and purpose-specific licensing are needed. A public vote by the company does not replace a
+creator's consent to train on their work. Encrypt session records by default, implement backup retention periods and avoid
+the misleading promise that deleting one key removes every copy or untrains a model.
+Source status
+Primary source: Architectural Blueprint for the Red Door Digital DAO, pp. 1-4 (executive structure and local network
+sketch), pp. 15-23 (shop/learning ideas), with later PRISMAsync changes. Source contains AI-chat speculation: the
+blueprint is evidence of planned architecture, not proof of deployment. Original Negustolonow proposal v2, especially pp.
+26-41, supplies product-specific intentions.
+
+  State today: No independent test or legal opinion is recorded in any of the three uploaded documents.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                    page 49
+LEGAL AND TECHNICAL SOURCES
+
+
+
+
+Appendix III - Verification references
+The following sources were checked to distinguish legal/technical baselines from the Red Door brainstorming. Official
+primary materials should be rechecked by counsel and engineers as requirements evolve.
+
+   Wyoming Legislature, Decentralized Autonomous Organization Supplement, W.S. 17-31 (including sections 104-115): wyoleg.gov
+   Wyoming Secretary of State, DAO LLC Articles of Organization and instructions:
+   sos.wyo.gov/Forms/Business/LLC/DAOLLC-ArticlesOrganization.pdf
+   Michigan LARA, Form 760 Application for Certificate of Authority to Transact Business in Michigan: michigan.gov/lara
+   Michigan LARA, Michigan Invests Locally Exemption (MILE), and MCL 451.2202a: michigan.gov/lara/bureau-list/cscl/securities
+   Antelope developer documentation: ABI and Ricardian clauses; permissions and action links: docs.antelope.io
+   Raspberry Pi official AI HAT+ and AI HAT+ 2 documentation: raspberrypi.com/documentation/accessories/ai-hat-plus.html
+   Vaulta Omnitrove roadmap (vendor claims and product positioning):
+   vaulta.com/resources/omnitrove-roadmap-fragmentation-to-orchestration
+Definitions of status
+Exists: supported by the studio's own dated evidence, separately verified where possible. Designed: written system not
+demonstrated. Proposed: a conditional relationship, legal mechanism or dependency without approval. Unverified: a claim
+present in the blueprint or proposal without supporting evidence, irrespective of how confidently it is worded.
+
+Editorial revision dated 10 October 2026. This document is a rigorous source-alignment draft, not an attorney opinion or
+confirmation that any partner accepts the terms.
+
+  State today: Company route, securities exemption, issuer, custody and user rights still require written selection and
+  confirmation.
+
+
+
+
+NEGUSTOLONOW / RED DOOR-ALIGNED GOVERNANCE REVISION / 10 OCT 2026                                                          page 50
+
